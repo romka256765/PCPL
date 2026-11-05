@@ -20,7 +20,7 @@ def get_coef(name, index):
 def solve_biquad(a, b, c):
     """Возвращает список действительных корней или None, если решений бесконечно много."""
     # Решаем A*t^2 + B*t + C = 0
-    if a == 0:
+    while a == 0:
         a = get_coef('A', 1)
 
     D = b * b - 4 * a * c
